@@ -1,0 +1,2 @@
+﻿0	00:00:00.000	ModuLab API 2.1.6051    Experiment Start time: 2023-05-02T15:50:00
+0	00:00:00.000	Solartron XM_Pstat1MS s/n:1051117. Firmware 99.99.99, 99.99.99. Calibrated Simulator, 2-5月-2023. Solartron XM_FRA1MHz. Firmware , . 

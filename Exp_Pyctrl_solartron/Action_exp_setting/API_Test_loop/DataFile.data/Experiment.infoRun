@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExperimentClass xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ClassHeader ID="ExperimentClass" Ver="2" Name="API_test2_loop" />
+  <FileHeader Username="WANG" CreationDate="2023-04-18T18:50:25.1219297-04:00" LastModDate="2023-05-02T15:50:00.675695-04:00" LastSaveLocation="./Action_exp_setting/API_Test2_loop/DataFile.data\Experiment.infoRun">
+    <FileType>Experiment</FileType>
+  </FileHeader>
+  <Name>API_test2_loop</Name>
+  <DataFile>New Experiment</DataFile>
+  <HardwareRequirements Mode="ECS" Application="XM_Electrochemistry" WiringConfiguration="Pstat" Generation="M1" PotentiostatFromEquipment="372471" Potentiostat="XM_Pstat1MS" FRA="XM_FRA1MHz" Femto="XM_FA" HV="NoHV" InternalBooster="NoIB" ExternalBooster="NoExternalBoost" ExternalUltraHv="NoUltraHv" SampleRef="NoSampleRef" Dssc="NoDssc" PolarityConvention="PositiveVPositiveI" Grounding="Internal">
+    <ClassHeader ID="HardwareRequirementsClass" Ver="1" Name="" />
+    <HvActive>true</HvActive>
+    <EbActive>true</EbActive>
+  </HardwareRequirements>
+  <CellSetup>
+    <ClassHeader ID="CellSetupClass" Ver="1" Name="" />
+    <Electrode Description="NHE" Voltage="0" />
+    <Area Quantity="Area" Value="0.0001" Units="cm²" />
+    <Density Quantity="Density" Value="1000000" Units="g/cm³" />
+    <Weight Quantity="Mass" Value="1" Units="g" />
+    <Thickness Quantity="Length" Value="0.001" Units="mm" />
+    <EmptyCellCapacitance Quantity="Capacitance" Value="8.85418781762039E-13" Units="pF" Enabled="false" />
+    <SternGeary Quantity="Voltage" Value="0.1" Units="mV" />
+    <IsDroppingElectrode>false</IsDroppingElectrode>
+    <FlickTime Quantity="Time" Value="0.05" Units="ms" />
+    <SampleReferenceType>IntRef</SampleReferenceType>
+    <RefConductance Quantity="Conductance" Value="1E-15" Units="S" />
+    <RefCapacitance Quantity="Capacitance" Value="1E-11" Units="pF" />
+  </CellSetup>
+  <PotentiostatSetup>
+    <ClassHeader ID="PotentiostatSetupClass" Ver="1" Name="" />
+    <Ranges>
+      <Terminals>TerminalsDefault</Terminals>
+      <Bandwidth>-1</Bandwidth>
+      <HighStability>auto</HighStability>
+      <VoltageRangeMin>-1</VoltageRangeMin>
+      <VoltageRangeMax>-1</VoltageRangeMax>
+      <CurrentRangeMin>-1</CurrentRangeMin>
+      <CurrentRangeMax>-1</CurrentRangeMax>
+      <VoltageRangeFilter>Slow</VoltageRangeFilter>
+      <CurrentRangeFilter>Slow</CurrentRangeFilter>
+      <AuxVoltage>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </AuxVoltage>
+      <AuxImpedance>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </AuxImpedance>
+      <LogRangeChanges>false</LogRangeChanges>
+    </Ranges>
+    <IrCompMethod>
+      <IRCompMethod>None</IRCompMethod>
+      <CorrectionFactor>0.95</CorrectionFactor>
+    </IrCompMethod>
+  </PotentiostatSetup>
+  <SafetyLimits>
+    <ClassHeader ID="SafetyLimitsClass" Ver="1" Name="" />
+    <VoltageMin Quantity="Voltage" Value="-8" Units="V" Enabled="false" />
+    <VoltageMax Quantity="Voltage" Value="8" Units="V" Enabled="false" />
+    <CurrentMin Quantity="Current" Value="-0.2" Units="mA" Enabled="false" />
+    <CurrentMax Quantity="Current" Value="0.2" Units="mA" Enabled="false" />
+    <ChargeMin Quantity="Charge" Value="-3600" Units="Ah" Enabled="false" />
+    <ChargeMax Quantity="Charge" Value="3600" Units="Ah" Enabled="false" />
+  </SafetyLimits>
+  <HideSteps>false</HideSteps>
+  <ShowStepTermination>true</ShowStepTermination>
+  <ShowPstatSetup>true</ShowPstatSetup>
+  <ShowControlOutputs>true</ShowControlOutputs>
+  <ShowGraphSetup>true</ShowGraphSetup>
+  <EndOfExperimentActions />
+  <Steps>
+    <Loop>
+      <ClassHeader ID="LoopClass" Ver="1" Name="" />
+      <StepType>LoopStep</StepType>
+      <LoopRepeat>
+        <Iterations>3</Iterations>
+      </LoopRepeat>
+      <Steps>
+        <Step>
+          <ClassHeader ID="StepClass" Ver="1" Name="Charging" />
+          <StepType>Galvanostatic</StepType>
+          <GraphSetup>
+            <ClassHeader ID="GraphConfig" Ver="1" Name="" />
+            <Graph1>
+              <ID>E_vs_T</ID>
+              <Name>E vs. Time</Name>
+              <Enabled>true</Enabled>
+              <Isotropic>false</Isotropic>
+              <LinkY1Y2>true</LinkY1Y2>
+              <ShowLegend>true</ShowLegend>
+              <ShowTitle>false</ShowTitle>
+              <AxisX>
+                <Quantity>Time</Quantity>
+                <AxisUnit>s</AxisUnit>
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>Time (s)</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>true</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>true</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisX>
+              <AxisY1>
+                <Quantity>Voltage</Quantity>
+                <AxisUnit>V</AxisUnit>
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>E vs. Ref (V)</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>true</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>false</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisY1>
+              <AxisY2>
+                <Quantity>None</Quantity>
+                <AxisUnit />
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>None</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>false</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>true</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisY2>
+            </Graph1>
+            <Graph2>
+              <ID>None</ID>
+              <Name>None</Name>
+              <Enabled>false</Enabled>
+              <Isotropic>false</Isotropic>
+              <LinkY1Y2>true</LinkY1Y2>
+              <ShowLegend>true</ShowLegend>
+              <ShowTitle>false</ShowTitle>
+              <AxisX>
+                <Quantity>None</Quantity>
+                <AxisUnit />
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>None</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>true</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>true</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisX>
+              <AxisY1>
+                <Quantity>None</Quantity>
+                <AxisUnit />
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>None</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>true</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>true</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisY1>
+              <AxisY2>
+                <Quantity>None</Quantity>
+                <AxisUnit />
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>None</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>false</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>true</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisY2>
+            </Graph2>
+          </GraphSetup>
+          <StartTime>2023-04-18T18:51:46.4292725-04:00</StartTime>
+          <ScanSetup>
+            <ClassHeader ID="ScanSetupClass" Ver="1" Name="" />
+            <Duration Quantity="Time" Value="10" Units="s" />
+            <BaseLevel Quantity="Current" Value="0.0025" Units="mA" Versus="vs Reference" />
+            <Cycles>0</Cycles>
+          </ScanSetup>
+          <MeasurementSetup>
+            <ClassHeader ID="MeasurementSetupClass" Ver="1" Name="" />
+            <MeasurementMode>Periodic</MeasurementMode>
+            <IntegrationPeriod Quantity="Time" Value="1" Units="s" />
+            <MeasurementRate Quantity="Time" Value="1" Units="Per second" />
+            <ResetCharge>false</ResetCharge>
+            <AllCycles>false</AllCycles>
+            <FirstCycle>false</FirstCycle>
+            <LastCycle>false</LastCycle>
+            <EveryNCycles>false</EveryNCycles>
+            <NumCycles>0</NumCycles>
+          </MeasurementSetup>
+          <TerminationConditions>
+            <ClassHeader ID="TerminationConditionsClass" Ver="1" Name="" />
+            <Conditions>
+              <TerminationGroupClass>
+                <ClassHeader ID="TerminationGroupClass" Ver="1" Name="" />
+                <Clasues>
+                  <TerminationClauseClass Enabled="true" TerminationQuantity="Voltage" GreaterThan="true" TerminationValue="3.8">
+                    <ClassHeader ID="TerminationClauseClass" Ver="1" Name="" />
+                  </TerminationClauseClass>
+                </Clasues>
+              </TerminationGroupClass>
+            </Conditions>
+          </TerminationConditions>
+          <PotentiostatSetup>
+            <ClassHeader ID="PotentiostatSetupClass" Ver="1" Name="" />
+            <IrCompAction>
+              <ApplyIrComp>false</ApplyIrComp>
+              <MeasureSolRes>false</MeasureSolRes>
+            </IrCompAction>
+          </PotentiostatSetup>
+          <ControlOutputs OutputAOn="false" OutputBOn="false" OutputCOn="false">
+            <ClassHeader ID="ControlOutputsClass" Ver="1" Name="" />
+          </ControlOutputs>
+          <IsPolarography>false</IsPolarography>
+        </Step>
+        <Step>
+          <ClassHeader ID="StepClass" Ver="1" Name="Discharging" />
+          <StepType>Galvanostatic</StepType>
+          <GraphSetup>
+            <ClassHeader ID="GraphConfig" Ver="1" Name="" />
+            <Graph1>
+              <ID>E_vs_T</ID>
+              <Name>E vs. Time</Name>
+              <Enabled>true</Enabled>
+              <Isotropic>false</Isotropic>
+              <LinkY1Y2>true</LinkY1Y2>
+              <ShowLegend>true</ShowLegend>
+              <ShowTitle>false</ShowTitle>
+              <AxisX>
+                <Quantity>Time</Quantity>
+                <AxisUnit>s</AxisUnit>
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>Time (s)</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>true</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>true</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisX>
+              <AxisY1>
+                <Quantity>Voltage</Quantity>
+                <AxisUnit>V</AxisUnit>
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>E vs. Ref (V)</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>true</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>false</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisY1>
+              <AxisY2>
+                <Quantity>None</Quantity>
+                <AxisUnit />
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>None</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>false</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>true</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisY2>
+            </Graph1>
+            <Graph2>
+              <ID>None</ID>
+              <Name>None</Name>
+              <Enabled>false</Enabled>
+              <Isotropic>false</Isotropic>
+              <LinkY1Y2>true</LinkY1Y2>
+              <ShowLegend>true</ShowLegend>
+              <ShowTitle>false</ShowTitle>
+              <AxisX>
+                <Quantity>None</Quantity>
+                <AxisUnit />
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>None</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>true</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>true</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisX>
+              <AxisY1>
+                <Quantity>None</Quantity>
+                <AxisUnit />
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>None</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>true</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>true</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisY1>
+              <AxisY2>
+                <Quantity>None</Quantity>
+                <AxisUnit />
+                <Channels>1</Channels>
+                <IsAutoAxisLabel>true</IsAutoAxisLabel>
+                <AxisLabel>None</AxisLabel>
+                <IsAutoMinimum>true</IsAutoMinimum>
+                <Minimum>0</Minimum>
+                <IsAutoMaximum>true</IsAutoMaximum>
+                <Maximum>1</Maximum>
+                <IsAutoMajorTick>true</IsAutoMajorTick>
+                <MajorTickValue>10</MajorTickValue>
+                <MajorTickMark>Outside</MajorTickMark>
+                <IsMajorGridVisible>false</IsMajorGridVisible>
+                <IsAutoMinorTick>true</IsAutoMinorTick>
+                <MinorTickValue>5</MinorTickValue>
+                <MinorTickMark>Outside</MinorTickMark>
+                <IsMinorGridVisible>false</IsMinorGridVisible>
+                <IsAutoAxisIntercept>true</IsAutoAxisIntercept>
+                <AxisIntercept>0</AxisIntercept>
+                <IsLogAxis>false</IsLogAxis>
+                <InvertAxis>false</InvertAxis>
+                <AxisScale>
+                  <Method>Linear</Method>
+                  <Parameter>1</Parameter>
+                </AxisScale>
+                <Filter />
+              </AxisY2>
+            </Graph2>
+          </GraphSetup>
+          <StartTime>2023-04-18T18:51:46.4292725-04:00</StartTime>
+          <ScanSetup>
+            <ClassHeader ID="ScanSetupClass" Ver="1" Name="" />
+            <Duration Quantity="Time" Value="10" Units="s" />
+            <BaseLevel Quantity="Current" Value="-0.0018" Units="mA" Versus="vs Reference" />
+            <Cycles>0</Cycles>
+          </ScanSetup>
+          <MeasurementSetup>
+            <ClassHeader ID="MeasurementSetupClass" Ver="1" Name="" />
+            <MeasurementMode>Periodic</MeasurementMode>
+            <IntegrationPeriod Quantity="Time" Value="1" Units="s" />
+            <MeasurementRate Quantity="Time" Value="1" Units="Per second" />
+            <ResetCharge>false</ResetCharge>
+            <AllCycles>false</AllCycles>
+            <FirstCycle>false</FirstCycle>
+            <LastCycle>false</LastCycle>
+            <EveryNCycles>false</EveryNCycles>
+            <NumCycles>0</NumCycles>
+          </MeasurementSetup>
+          <TerminationConditions>
+            <ClassHeader ID="TerminationConditionsClass" Ver="1" Name="" />
+            <Conditions>
+              <TerminationGroupClass>
+                <ClassHeader ID="TerminationGroupClass" Ver="1" Name="" />
+                <Clasues>
+                  <TerminationClauseClass Enabled="true" TerminationQuantity="Voltage" GreaterThan="false" TerminationValue="2.4">
+                    <ClassHeader ID="TerminationClauseClass" Ver="1" Name="" />
+                  </TerminationClauseClass>
+                </Clasues>
+              </TerminationGroupClass>
+            </Conditions>
+          </TerminationConditions>
+          <PotentiostatSetup>
+            <ClassHeader ID="PotentiostatSetupClass" Ver="1" Name="" />
+            <IrCompAction>
+              <ApplyIrComp>false</ApplyIrComp>
+              <MeasureSolRes>false</MeasureSolRes>
+            </IrCompAction>
+          </PotentiostatSetup>
+          <ControlOutputs OutputAOn="false" OutputBOn="false" OutputCOn="false">
+            <ClassHeader ID="ControlOutputsClass" Ver="1" Name="" />
+          </ControlOutputs>
+          <IsPolarography>false</IsPolarography>
+        </Step>
+      </Steps>
+    </Loop>
+  </Steps>
+</ExperimentClass>
